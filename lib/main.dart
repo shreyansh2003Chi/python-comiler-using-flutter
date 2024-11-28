@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
-import 'code_editor.dart'; // Import the code editor
+import 'code_editor.dart';
 
+// please start server first then run the app
+// "npm start" in server folder
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -13,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const CodeEditor(), // Set CodeEditor as the home screen
+      home: const CodeEditor(),
     );
   }
 }

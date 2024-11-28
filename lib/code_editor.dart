@@ -1,7 +1,4 @@
-// ... imports ...
 import 'package:flutter/material.dart';
-import 'package:flutter_highlight/flutter_highlight.dart';
-import 'package:flutter_highlight/themes/vs2015.dart';
 import 'services/python_service.dart';
 
 class CodeEditor extends StatefulWidget {
@@ -19,12 +16,12 @@ class _CodeEditorState extends State<CodeEditor> {
 
   void _runCode() async {
     try {
-      setState(() {                               
+      setState(() {
         _output = 'Running code...';
       });
-      
+
       final result = await PythonService.runPythonCode(_controller.text);
-      
+
       setState(() {
         _output = result;
       });
